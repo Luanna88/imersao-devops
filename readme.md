@@ -47,18 +47,24 @@ Este projeto é uma API desenvolvida com FastAPI para gerenciar alunos, cursos e
 
 ---
 
-## Estrutura do Projeto
-
-- `app.py`: Arquivo principal da aplicação FastAPI.
-- `models.py`: Modelos do banco de dados (SQLAlchemy).
-- `schemas.py`: Schemas de validação (Pydantic).
-- `database.py`: Configuração do banco de dados SQLite.
-- `routers/`: Diretório com os arquivos de rotas (alunos, cursos, matrículas).
-- `requirements.txt`: Lista de dependências do projeto.
-
----
-
 - O banco de dados SQLite será criado automaticamente como `escola.db` na primeira execução.
 - Para reiniciar o banco, basta apagar o arquivo `escola.db` (isso apagará todos os dados).
 
 ---
+Autenticando no Google Cloud
+
+gcloud auth login
+gcloud config set project PROJECT_ID
+gcloud run deploy --port=8000
+
+Estrutura do Projeto
+
+    app.py: Arquivo principal da aplicação FastAPI.
+    models.py: Modelos do banco de dados (SQLAlchemy).
+    schemas.py: Schemas de validação (Pydantic).
+    database.py: Configuração do banco de dados SQLite.
+    routers/: Diretório com os arquivos de rotas (alunos, cursos, matrículas).
+    requirements.txt: Lista de dependências do projeto.
+
+    O banco de dados SQLite será criado automaticamente como escola.db na primeira execução.
+    Para reiniciar o banco, basta apagar o arquivo escola.db (isso apagará todos os dados).
